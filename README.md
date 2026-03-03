@@ -1,5 +1,7 @@
 Simple library to add services defined with an attribute in the currently executing assembly to the ServiceCollection
 
+dotnet add package MetIit.Helpers.DI
+
 <pre>
 
 [AppService(ServiceLifetime.Transient, Key = "principal")
