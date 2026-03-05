@@ -1,6 +1,5 @@
 ﻿using MetIit.Helpers.DI;
 using DemoApp.Services.Common;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 static class Program
@@ -14,7 +13,6 @@ static class Program
     public static void Main(string[] args)
     {
         var builder = Host.CreateApplicationBuilder(args);
-        builder.Services.AddHostedService<MainWorker>();
         builder.Services.AddAppServices();
         var app = builder.Build();
         app.Run();
