@@ -5,11 +5,8 @@ using Microsoft.Extensions.Hosting;
 static class Program
 {
     [AppService]
-    public static ICountGenerator CreateCounter(IServiceProvider sp, object? key)
-    {
-        return new SequentialCounter(1000);
-    }
-
+    public static ICountGenerator CreateCounter(IServiceProvider sp, object? key) => new SequentialCounter(1000);
+    
     public static void Main(string[] args)
     {
         var builder = Host.CreateApplicationBuilder(args);
