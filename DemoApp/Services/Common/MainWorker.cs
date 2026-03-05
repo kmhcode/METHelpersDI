@@ -1,9 +1,11 @@
+using MetIit.Helpers.DI;
 using System.Net.Sockets;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
 namespace DemoApp.Services.Common;
 
+[AppService]
 public class MainWorker(ITransportLayer transport, ILogger<MainWorker> logging, ICommunicationLayer handler) : BackgroundService
 {
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
