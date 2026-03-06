@@ -5,7 +5,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PackageId>MetIit.Helpers.DI</PackageId>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
+    <RepositoryUrl>https://github.com/kmhcode/METHelpersDI</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>

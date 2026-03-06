@@ -7,7 +7,7 @@ public static class AppServiceExtensions
 {
     public static IServiceCollection AddAppServices(this IServiceCollection services)
     {
-        var types = Assembly.GetEntryAssembly()!.GetTypes();
+        var types = Assembly.GetCallingAssembly().GetTypes();
         types.Where(t => t.IsClass && !t.IsAbstract)
             .Select(t => (Type: t, Attr: t.GetCustomAttribute<AppServiceAttribute>()))
             .Where(s => s.Attr != null)
